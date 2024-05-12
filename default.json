@@ -6,5 +6,6 @@
     ":disableRateLimiting",
     ":automergeAll"
   ],
-  "labels": ["dependencies"]
+  "labels": ["dependencies"],
+  "configMigration": true
 }
