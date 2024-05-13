@@ -1,6 +1,15 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "local>pyama2000/renovate-config"
+  "extends": ["local>pyama2000/renovate-config"],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "fileMatch": ["^default\\.json$"],
+      "matchStrings": [
+        "\"github>aquaproj/aqua-renovate-config#(?<currentValue>[^\" \\n\\(]+)"
+      ],
+      "depNameTemplate": "aquaproj/aqua-renovate-config",
+      "datasourceTemplate": "github-releases"
+    }
   ]
 }
